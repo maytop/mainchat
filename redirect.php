@@ -22,8 +22,9 @@ $url = str_replace('&gt;', '>', $url);
 $url = str_replace('\\', '', $url);
 
 if ($url) {
-    if (substr($url, 0, 7) != "http://")
+    if (substr($url, 0, 7) != "http://" && substr($url, 0, 8) != "https://") {
         $url = "http://" . $url;
+    }
 ?>
 <html><head>
 <title>DEREFER</TITLE><META CHARSET=UTF-8>
